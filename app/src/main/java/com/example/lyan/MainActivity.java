@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
                 R.drawable.im555
         };
 
-        private int currentIndex = 0;
+        private int currentInde = 0;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -39,14 +39,14 @@ public class MainActivity extends AppCompatActivity {
 
 
             nextButton.setOnClickListener(v -> {
-                currentIndex = (currentIndex + 1) % images.length;
-                imageView.setImageResource(images[currentIndex]);
+                currentInde = (currentInde + 1) % images.length;
+                imageView.setImageResource(images[currentInde]);
             });
 
 
             prevButton.setOnClickListener(v -> {
-                currentIndex = (currentIndex - 1 + images.length) % images.length;
-                imageView.setImageResource(images[currentIndex]);
+                currentInde = (currentInde - 1 + images.length) % images.length;
+                imageView.setImageResource(images[currentInde]);
 
             });
         }}
